@@ -1,0 +1,44 @@
+\RequirePackage{listings}
+\RequirePackage{xspace}
+
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\lstdefinelanguage{getdp}{
+  backgroundcolor=\color{white},  
+  basicstyle=\footnotesize\ttfamily\color{black},   
+  breakatwhitespace=false,
+  breaklines=true,               
+  captionpos=b,                   
+  commentstyle=\color{dkgreen},
+  deletekeywords={...},          
+  escapeinside={\%*}{*)},                  
+  frame=tb, %top/bottom lines
+  language=C++,                
+  keywordstyle=\color{purple},  
+  morekeywords={IterativeLinearSolver, For, SetCommSelf, SetCommWorld, Call,
+    EndFor, GenerateRHSGroup, Generate, GenerateRHS, Solve, SolveAgain,
+    Galerkin, Integration,
+    Jacobian, In, Dof, Name, Quantity, Type, Equation, NameOfSpace, If,
+    EndIf, Macro, Return, Region, ComplexScalarField, Form0, Form1,
+    NameOfCoef, Function, Support, Entity, NodesOf, EdgesOf, Constraint,
+    BasisFunction, FunctionSpace, NameOfCoef, EntityType,
+    NameOfConstraint, Constraint, All, NameOfMesh, NameOfFormulation,
+    ComplexVectorField, XYZ, PostOperation,d, OSRC_Bj, OSRC_Aj, OSRC_C0,
+    BF_Node, BF_Node_2E, BF_Edge, Sprintf, StrCat, Complex, System, Operation,
+    FemEquation, Local},  
+  identifierstyle=\color{black},
+  stringstyle=\color{blue},      
+  numbers=left,                 
+  numbersep=5pt,                  
+  numberstyle=\tiny\color{black}, 
+  rulecolor=\color{black},        
+  showspaces=false,               
+  showstringspaces=false,        
+  showtabs=false,                
+  stepnumber=1,                   
+  tabsize=5,                     
+  title=\lstname,                 
+}
+
+\newcommand{\getdp}{GETDP\xspace{}}
+\lstnewenvironment{getdpl}{\lstset{language=getdp}}{} %Listing
+\newcommand{\getdpi}[1]{\lstinline[language=getdp]!#1!} %Inline
